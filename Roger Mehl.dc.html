@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  ::selection { background: #cda155; color: #14100c; }
+  @keyframes pulseDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.45; transform:scale(.78); } }
+  @keyframes slowZoom { from { transform: scale(1.05); } to { transform: scale(1.16); } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<div data-root="" style="background:#14100c;color:#f2e8d7;font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;overflow-y:visible;position:relative;--accent:#cda155;">
+
+  <!-- ===================== NAV ===================== -->
+  <nav data-nav="" style="position:sticky;top:0;z-index:60;background:rgba(14,11,8,0.22);backdrop-filter:blur(6px) saturate(120%);-webkit-backdrop-filter:blur(6px) saturate(120%);border-bottom:1px solid rgba(231,212,176,0.04);transition:background .5s ease, box-shadow .5s ease, border-color .5s ease, backdrop-filter .5s ease;">
+    <div style="max-width:1180px;margin:0 auto;padding:14px clamp(24px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <a href="#top" aria-label="Mehl Coaching home" style="text-decoration:none;display:inline-flex;align-items:center;">
+        <img src="assets/logo-gold.png" alt="Mehl Coaching" style="display:block;height:21px;width:auto;">
+      </a>
+      <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;">
+        <a href="#reframe" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">The Reframe</a>
+        <a href="#pillars" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">The Pillars</a>
+        <a href="#about" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">About Roger</a>
+        <a href="#stories" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">Stories</a>
+        <a href="#book" data-book="" style="text-decoration:none;display:inline-block;white-space:nowrap;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;padding:10px 20px;font-size:15px;box-shadow:0 8px 22px -10px rgba(205,161,85,0.7);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;" style-hover="transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 14px 30px -10px rgba(205,161,85,0.85);">Schedule a meeting</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header id="top" style="position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:center;padding:clamp(96px,13vh,150px) 0 clamp(80px,11vh,120px);overflow:hidden;">
+    <div data-hero-bg="" aria-hidden="true" style="position:absolute;inset:0;background-image:url('assets/roger-skyline.png');background-size:cover;background-position:45% center;animation:slowZoom 30s ease-in-out infinite alternate;will-change:transform;"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,8,5,0.9) 0%, rgba(11,8,5,0.64) 30%, rgba(11,8,5,0.3) 56%, rgba(11,8,5,0.08) 80%, rgba(11,8,5,0.16) 100%);"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(11,8,5,0.9) 0%, rgba(11,8,5,0.22) 28%, transparent 50%, transparent 74%, rgba(11,8,5,0.42) 100%);"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);width:100%;">
+      <div style="max-width:38em;">
+        
+        <h1 data-reveal="" data-reveal-delay="60" style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-0.012em;margin:0 0 26px;color:#f9f1e3;text-shadow:0 2px 18px rgba(0,0,0,0.5);">Discover, develop, and fan the flames of your inner brilliance.</h1>
+        <p data-reveal="" data-reveal-delay="140" style="font-size:clamp(18px,1.5vw,21px);color:#ddd0bb;margin:0 0 36px;max-width:31em;text-shadow:0 1px 12px rgba(0,0,0,0.4);">I help ADHD executives turn the speed, intuition, and action-readiness of their brain into real-world effectiveness — without grinding against the way it actually works.</p>
+        <div data-reveal="" data-reveal-delay="220" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <a href="#book" data-book="" style="text-decoration:none;display:inline-block;white-space:nowrap;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;font-size:17px;padding:15px 30px;box-shadow:0 14px 34px -14px rgba(205,161,85,0.75);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;" style-hover="transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 20px 42px -14px rgba(205,161,85,0.9);">Schedule a meeting</a>
+        </div>
+        <div data-reveal="" data-reveal-delay="300" style="margin-top:42px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:#9c9080;font-size:14px;">
+          <span><b style="color:var(--accent,#cda155);font-weight:700;">28</b> years coaching</span>
+          <span style="width:4px;height:4px;border-radius:999px;background:rgba(231,212,176,0.25);"></span>
+          <span>1:1 &amp; fully bespoke</span>
+          <span style="width:4px;height:4px;border-radius:999px;background:rgba(231,212,176,0.25);"></span>
+          <span>Greater Toronto &amp; remote</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== THE PROBLEM ===================== -->
+  <section id="problem" style="scroll-margin-top:84px;padding:clamp(80px,11vh,140px) 0;border-top:1px solid rgba(231,212,176,0.08);">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <p data-reveal="" style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#cda155);margin:0 0 18px;">The struggle is real</p>
+      <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.06;letter-spacing:-0.01em;margin:0 0 18px;max-width:15em;color:#f3ead9;">You’re capable of so much. So why does everything feel so hard?</h2>
+      <p data-reveal="" data-reveal-delay="120" style="font-size:clamp(17px,1.4vw,20px);color:#a99c88;margin:0 0 56px;max-width:34em;">If any of this lands a little too close to home, you’re not broken — and you’re not alone.</p>
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+        <sc-for list="{{ problems }}" as="p" hint-placeholder-count="4">
+          <div data-reveal="" data-reveal-delay="{{ p.delay }}" style="background:#1d1712;border:1px solid rgba(231,212,176,0.1);border-radius:20px;padding:clamp(26px,3vw,34px);transition:transform .4s ease, border-color .4s ease, box-shadow .4s ease;" style-hover="transform:translateY(-5px);border-color:rgba(205,161,85,0.32);box-shadow:0 26px 50px -30px rgba(0,0,0,0.8);">
+            <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;letter-spacing:0;margin:0 0 6px;color:#f3ead9;">{{ p.h }}</h3>
+            <p style="font-size:16px;color:#a99c88;margin:0;">{{ p.p }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE REFRAME (skyline) ===================== -->
+  <section id="reframe" style="scroll-margin-top: 84px; position: relative; padding: clamp(90px,13vh,160px) 0; overflow: hidden">
+    <div data-skyline="" aria-hidden="true" style="position:absolute;inset:0;background-image:url('assets/reframe-bg.jpg');background-size:cover;background-position:center center;animation:slowZoom 26s ease-in-out infinite alternate;will-change:transform;"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(105deg, rgba(15,12,9,0.95) 0%, rgba(15,12,9,0.86) 48%, rgba(20,16,12,0.7) 100%);"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(15,12,9,0.95), transparent 30%, transparent 78%, rgba(15,12,9,0.85));"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <p data-reveal="" style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#e0b070;margin:0 0 20px;">The reframe</p>
+      <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(32px,4.6vw,58px);line-height:1.05;letter-spacing:-0.015em;margin:0 0 24px;max-width:15em;color:#fbf3e4;">Your ADHD isn’t a flaw to fix. It’s horsepower waiting to be harnessed.</h2>
+      <p data-reveal="" data-reveal-delay="120" style="font-size:clamp(18px,1.5vw,21px);margin:0 0 64px;max-width:40em;color:#cbbfad;">The same wiring behind the overwhelm is the source of your edge. We don’t try to make you “normal.” We build a system around the brain you actually have — so your gifts do the heavy lifting.</p>
+      <div style="display:grid;gap:1px;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));background:rgba(231,212,176,0.12);border:1px solid rgba(231,212,176,0.12);border-radius:22px;overflow:hidden;">
+        <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="6">
+          <div data-reveal="" data-reveal-delay="{{ s.delay }}" style="background:#181410;padding:clamp(26px,2.6vw,34px);transition:background .4s ease;" style-hover="background:#1f1913;">
+            <div style="font-family:'Newsreader',serif;font-weight:600;font-size:14px;color:#e0b070;margin:0 0 14px;">{{ s.n }}</div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:20px;letter-spacing:0;margin:0 0 10px;color:#f3ead9;">{{ s.h }}</h3>
+            <p style="font-size:16px;margin:0;line-height:1.62;color:#c4b8a3;">{{ s.p }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE METHOD (3 pillars) ===================== -->
+  <section id="pillars" style="scroll-margin-top:84px;padding:clamp(80px,11vh,140px) 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <div data-reveal="" style="max-width:38em;margin:0 auto 64px;text-align:center;">
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#cda155);margin:0 0 18px;">The 3 Pillars of Transformation</p>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.06;letter-spacing:-0.01em;margin:0 0 18px;color:#f3ead9;">Awaken. Activate. Actualize.</h2>
+        <p style="font-size:clamp(17px,1.4vw,20px);color:#a99c88;margin:0;">Three movements of the same work — each one building on the last, each one shaped around the brain you actually have.</p>
+      </div>
+      <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));">
+        <sc-for list="{{ pillars }}" as="pl" hint-placeholder-count="3">
+          <div data-reveal="" data-pillar-card="" data-reveal-delay="{{ pl.delay }}" style="background:#1d1712;border:1px solid rgba(231,212,176,0.1);border-radius:24px;padding:clamp(30px,3vw,40px);display:flex;flex-direction:column;cursor:default;transition:transform .45s cubic-bezier(.22,.61,.36,1), background .45s ease, border-color .45s ease, box-shadow .45s ease;">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
+              <span data-pill-icon="" style="font-size:26px;line-height:1;color:var(--accent,#cda155);width:52px;height:52px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:rgba(205,161,85,0.1);border:1px solid rgba(205,161,85,0.25);transition:color .4s ease, background .4s ease, border-color .4s ease;">{{ pl.icon }}</span>
+              <h3 data-pill-ink="" style="font-family:'Newsreader',serif;font-weight:600;font-size:27px;letter-spacing:-0.01em;margin:0;color:#f3ead9;transition:color .4s ease;">{{ pl.title }}</h3>
+            </div>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;">
+              <sc-for list="{{ pl.items }}" as="it" hint-placeholder-count="3">
+                <li data-pill-ink="" style="display:flex;align-items:flex-start;gap:12px;font-size:16px;color:#bdb29e;line-height:1.55;transition:color .4s ease;">
+                  <span data-pill-dot="" style="flex-shrink:0;color:var(--accent,#cda155);margin-top:2px;font-size:14px;transition:color .4s ease;">◆</span>
+                  <span>{{ it }}</span>
+                </li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ROGER ===================== -->
+  <section id="about" style="scroll-margin-top:84px;padding:clamp(80px,11vh,140px) 0;background:#19140f;border-top:1px solid rgba(231,212,176,0.08);border-bottom:1px solid rgba(231,212,176,0.08);">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);display:flex;gap:clamp(40px,5vw,72px);flex-wrap:wrap;align-items:flex-start;">
+      <div data-reveal="" style="flex:1 1 320px;min-width:280px;position:sticky;top:96px;">
+        <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(231,212,176,0.12);box-shadow:0 34px 64px -38px rgba(0,0,0,0.85);">
+          <img src="assets/roger-portrait.png" alt="Roger Mehl" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:58% 24%;">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="background:#1d1712;border:1px solid rgba(231,212,176,0.1);border-radius:16px;padding:16px 18px;">
+            <b style="display:block;font-family:'Newsreader',serif;font-weight:600;font-size:25px;color:#f3ead9;">28 yrs</b>
+            <span style="font-size:13px;color:#a99c88;">coaching experience</span>
+          </div>
+          <div style="background:#1d1712;border:1px solid rgba(231,212,176,0.1);border-radius:16px;padding:16px 18px;">
+            <b style="display:block;font-family:'Newsreader',serif;font-weight:600;font-size:25px;color:#f3ead9;">CEOs</b>
+            <span style="font-size:13px;color:#a99c88;">&amp; leadership teams</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" data-reveal-delay="120" style="flex:1 1 440px;min-width:300px;">
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#cda155);margin:0 0 18px;">About Roger</p>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.08;letter-spacing:-0.01em;margin:0 0 28px;max-width:14em;color:#f3ead9;">A coach who has spent 28 years helping people unlock themselves.</h2>
+        <div style="font-size:clamp(16px,1.3vw,18px);line-height:1.75;display:flex;flex-direction:column;gap:18px;color:#cabfac;">
+          <p style="margin:0;">Roger Mehl has been a coach in different forms for 28 years. An award-winning graduate of the prestigious London Studio Centre in London, UK — a college for theatre arts professionals — he began by coaching aspiring actors and singers, prized for helping students build their own internal awareness and refine technique from the inside out. A former competitive swimmer, he carried the same approach into a private swimming school for preteens.</p>
+          <p style="margin:0;">In 2016 he developed a workshop called <em style="color:#e6dac6;font-style:italic;">The Art of Listening</em> — a total reframe on how to listen at the deepest levels, hold space, and be fully present with another person. In 2017 he began facilitating year-long leadership development workshops for CEOs, business owners, and management teams, where accountability was the central theme. He built a “laboratory” approach to follow-through: when a participant stalled, he searched for the inner and outer blockages standing between them and the outcome they wanted.</p>
+          <p style="margin:0;">Sponsoring dozens of people through twelve-step recovery sharpened his eye for blind spots, unconscious decisions, and self-sabotage.</p>
+          <p style="margin:0;">Roger sees himself as a <strong style="color:var(--accent,#cda155);font-weight:600;">bridger</strong> — a term coined by Lynn Weiss, PhD, in <em style="color:#e6dac6;font-style:italic;">Embracing A.D.D.: A Healing Perspective</em>. A bridger shares the wiring of an ADHDer while adapting reasonably well to a more linear thinking style. He doesn’t coach ADHD from a textbook — he coaches it from the inside.</p>
+          <p style="margin:0;color:#a99c88;">In 2025 Roger began freelancing full-time, steadily acquiring ADHD professionals and diving deep into the study and practice of ADHD coaching. He lives in Toronto with his wife and kids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CASE STUDIES ===================== -->
+  <sc-if value="{{ showPlaceholders }}" hint-placeholder-val="{{ true }}">
+  <section id="stories" style="scroll-margin-top:84px;padding:clamp(80px,11vh,140px) 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <p data-reveal="" style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#cda155);margin:0 0 14px;">Case studies</p>
+      <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.06;letter-spacing:-0.01em;margin:0 0 14px;color:#f3ead9;">Real results from professionals who have seen major transformations.<br></h2>
+      
+      <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+        <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+          <div data-reveal="" data-reveal-delay="{{ c.delay }}" style="background:#1d1712;border:1px solid rgba(231,212,176,0.1);border-radius:24px;padding:clamp(28px,3vw,38px);display:flex;flex-direction:column;transition:transform .4s ease, border-color .4s ease, box-shadow .4s ease;" style-hover="transform:translateY(-5px);border-color:rgba(205,161,85,0.3);box-shadow:0 28px 54px -32px rgba(0,0,0,0.85);">
+            <div style="font-family:'Newsreader',serif;font-weight:600;font-size:clamp(36px,4vw,48px);line-height:1;letter-spacing:-0.02em;color:var(--accent,#cda155);margin-bottom:6px;">{{ c.metric }}</div>
+            <div style="font-size:14px;color:#a99c88;margin-bottom:24px;">{{ c.label }}</div>
+            <p style="font-size:17px;color:#e6dac6;margin:0 0 24px;line-height:1.6;flex:1;">“{{ c.quote }}”</p>
+            <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(231,212,176,0.1);padding-top:20px;">
+              <span style="width:38px;height:38px;border-radius:999px;background:rgba(205,161,85,0.14);color:var(--accent,#cda155);display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;font-family:'Newsreader',serif;">{{ c.initial }}</span>
+              <div>
+                <div style="font-weight:600;font-size:15px;color:#f3ead9;">{{ c.name }}</div>
+                <div style="font-size:13px;color:#a99c88;">{{ c.role }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section style="padding:clamp(70px,9vh,120px) 0;background:#19140f;border-top:1px solid rgba(231,212,176,0.08);border-bottom:1px solid rgba(231,212,176,0.08);">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <div style="display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+          <figure data-reveal="" data-reveal-delay="{{ t.delay }}" style="margin:0;">
+            <span style="font-family:'Newsreader',serif;font-weight:600;font-size:50px;line-height:0.6;color:var(--accent,#cda155);">“</span>
+            <blockquote style="margin:10px 0 20px;font-family:'Newsreader',serif;font-size:clamp(18px,1.5vw,22px);line-height:1.45;color:#f0e6d4;font-weight:500;">{{ t.quote }}</blockquote>
+            <figcaption style="font-size:14px;color:#a99c88;"><b style="color:#f3ead9;font-weight:600;">{{ t.name }}</b> · {{ t.role }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ===================== WHO IT'S FOR ===================== -->
+  <section style="padding:clamp(80px,11vh,140px) 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);display:flex;gap:clamp(40px,5vw,72px);flex-wrap:wrap;">
+      <div data-reveal="" style="flex:1 1 320px;min-width:280px;">
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#cda155);margin:0 0 18px;">Who it’s for</p>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.06;letter-spacing:-0.01em;margin:0 0 18px;color:#f3ead9;">Is this for you?</h2>
+        <p style="font-size:clamp(17px,1.4vw,20px);color:#a99c88;margin:0;">This work is for high-functioning professionals who know there’s more in the tank.</p>
+      </div>
+      <div style="flex:1 1 420px;min-width:300px;display:flex;flex-direction:column;gap:14px;">
+        <sc-for list="{{ whoItems }}" as="w" hint-placeholder-count="4">
+          <div data-reveal="" data-reveal-delay="{{ w.delay }}" style="display:flex;align-items:flex-start;gap:16px;background:#1d1712;border:1px solid rgba(231,212,176,0.1);border-radius:18px;padding:22px 24px;transition:border-color .35s ease, transform .35s ease;" style-hover="border-color:rgba(205,161,85,0.3);transform:translateX(4px);">
+            <span style="flex-shrink:0;width:26px;height:26px;border-radius:999px;background:var(--accent,#cda155);color:#17120c;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;margin-top:1px;">✓</span>
+            <span style="font-size:17px;color:#e6dac6;line-height:1.5;">{{ w.t }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FROM THE BOOK ===================== -->
+  <section style="padding:clamp(90px,12vh,150px) 0;background:#0f0c09;border-top:1px solid rgba(231,212,176,0.08);">
+    <div data-reveal="" style="max-width:840px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <p style="font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#e0b070;margin:0 0 16px;">From the book</p>
+      <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin:0 0 8px;color:#f3ead9;">Executive Brilliance the ADHD Way <br><span style="color: rgb(111, 103, 87); font-weight: 500; font-style: italic;">(working title)</span></h2>
+      <p style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#e0b070;margin:0 0 40px;">Chapter Three · Made With Heroes and Dragonslayers In Mind</p>
+      <div style="font-family:'Newsreader',serif;font-size:clamp(18px,1.6vw,22px);line-height:1.8;color:#d6cbb7;display:flex;flex-direction:column;gap:24px;">
+        <p style="margin:0;"><span style="float:left;font-family:'Newsreader',serif;font-weight:600;font-size:76px;line-height:0.78;color:var(--accent,#cda155);margin:6px 16px 0 0;">A</span>DHDers often carry a staunch resistance to accepting recent, well-researched findings — namely, that they are brilliant, essential to the workplace, and strategically invaluable to their teams. In these pages, you’ll learn to dislodge the stake of that resistance — however big or small — and discover the full bloom of your ADHD talents.</p>
+        <p style="margin:0;">You may already have been through a slew of resources that didn’t help — books, podcasts, influencers, workshops, that ten-page, over-hyphenated habit-building strategy you had ChatGPT generate. Before we go any further: take a minute to appreciate everything you’ve done to succeed in a society that doesn’t yet appreciate your gifts.</p>
+      </div>
+      <blockquote style="margin:36px 0 0;border-left:3px solid var(--accent,#cda155);padding:8px 0 8px 26px;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(23px,3vw,32px);line-height:1.26;letter-spacing:-0.01em;color:#f7efe0;">You are not lazy. You are extremely motivated. If you achieved averagely, you’re a <span style="color:var(--accent,#cda155);">hero</span>. If you’ve gone further than that, you’re a <span style="color:var(--accent,#cda155);">dragonslayer</span>.</blockquote>
+      <a href="Chapter Three - Heroes and Dragonslayers.dc.html" style="margin-top:36px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;color:#17120c;background:var(--accent,#cda155);font-weight:600;font-size:16px;border-radius:999px;padding:13px 24px;box-shadow:0 14px 34px -16px rgba(205,161,85,0.7);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease, gap .25s ease;" style-hover="transform:translateY(-2px);gap:15px;filter:brightness(1.06);box-shadow:0 20px 42px -16px rgba(205,161,85,0.9);">Read the full chapter <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section id="book" style="scroll-margin-top:84px;position:relative;padding:clamp(90px,14vh,180px) 0;text-align:center;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:780px;height:780px;max-width:120vw;border-radius:50%;background:radial-gradient(circle, rgba(205,161,85,0.14), transparent 62%);pointer-events:none;"></div>
+    <div data-reveal="" style="position:relative;max-width:720px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 12px;border:1px solid rgba(231,212,176,0.16);border-radius:999px;background:rgba(231,212,176,0.04);font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#a99c88;margin-bottom:28px;">
+        <span style="width:7px;height:7px;border-radius:999px;background:var(--accent,#cda155);animation:pulseDot 2.4s ease-in-out infinite;"></span>
+        <span>Free Transformative Conversation</span>
+      </div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(36px,5.4vw,64px);line-height:1.04;letter-spacing:-0.015em;margin:0 0 22px;color:#f7efe0;">Two hours. <span style="color:var(--accent,#cda155);">No cost.</span> No obligation.</h2>
+      <p style="font-size:clamp(18px,1.5vw,21px);color:#b7ab97;margin:0 auto;max-width:30em;">I reserve space for a limited number of conversations each week. Select a time below to reserve yours.</p>
+    </div>
+
+    <div data-reveal="" data-reveal-delay="120" style="position:relative;max-width:900px;margin:clamp(40px,6vh,60px) auto 0;padding:0 clamp(16px,4vw,40px);">
+      <div data-inline-cal="" style="position:relative;border:1px solid rgba(231,212,176,0.14);border-radius:22px;overflow:hidden;background:#14100c;box-shadow:0 40px 90px -44px rgba(0,0,0,0.85);min-height:680px;">
+        <div data-inline-loading="" style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#14100c;color:#a99c88;transition:opacity .35s ease;">
+          <span style="width:30px;height:30px;border-radius:999px;border:3px solid rgba(205,161,85,0.25);border-top-color:var(--accent,#cda155);animation:spin 0.9s linear infinite;display:inline-block;"></span>
+          <span style="font-size:14px;">Loading available times…</span>
+        </div>
+        <iframe data-inline-iframe="" title="Reserve your Free Transformative Conversation" style="position:relative;z-index:1;width:100%;height:700px;border:0;display:block;"></iframe>
+      </div>
+      <p style="font-size:15px;color:#9c9080;margin:22px 0 0;text-align:center;">Prefer to talk first? Call <a href="tel:+16479925108" style="color:var(--accent,#cda155);text-decoration:none;font-weight:600;">647-992-5108</a> · or <a data-book="" href="#book" style="color:var(--accent,#cda155);text-decoration:none;font-weight:600;">open the scheduler in a window</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="border-top:1px solid rgba(231,212,176,0.1);padding:48px 0;background:#0f0c09;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <div>
+        <img src="assets/logo-white.png" alt="Mehl Coaching" style="display:block;height:17px;width:auto;margin-bottom:9px;opacity:0.92;">
+        <div style="font-size:13px;color:#a99c88;">ADHD Coaching for Professionals · Toronto, Canada</div>
+      </div>
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#cda155);font-weight:600;">Awaken · Activate · Actualize</div>
+      <div style="font-size:13px;color:#9c9080;">© <span data-year="">2026</span> Roger Mehl</div>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <a href="#top" data-to-top="" aria-label="Back to top" style="position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:70;width:48px;height:48px;border-radius:999px;background:var(--accent,#cda155);color:#17120c;display:inline-flex;align-items:center;justify-content:center;font-size:18px;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,0.6);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .3s ease, transform .3s ease, filter .25s ease;" style-hover="filter:brightness(1.08);">↑</a>
+
+  <!-- ===================== BOOKING MODAL ===================== -->
+  <div data-modal="" role="dialog" aria-modal="true" aria-label="Schedule a meeting" style="position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:clamp(14px,3.5vw,40px);">
+    <div data-modal-backdrop="" style="position:absolute;inset:0;background:rgba(8,6,4,0.8);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);opacity:0;transition:opacity .35s ease;cursor:pointer;"></div>
+    <div data-modal-card="" style="position:relative;width:min(720px,100%);height:min(780px,88vh);background:#14100c;border:1px solid rgba(231,212,176,0.16);border-radius:22px;overflow:hidden;box-shadow:0 50px 110px -40px rgba(0,0,0,0.92);opacity:0;transform:translateY(22px) scale(.97);transition:transform .42s cubic-bezier(.22,.61,.36,1), opacity .42s ease;display:flex;flex-direction:column;">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border-bottom:1px solid rgba(231,212,176,0.1);">
+        <div style="display:flex;align-items:center;gap:12px;min-width:0;">
+          <span style="width:8px;height:8px;border-radius:999px;background:var(--accent,#cda155);flex-shrink:0;animation:pulseDot 2.4s ease-in-out infinite;"></span>
+          <div style="min-width:0;">
+            <div style="font-family:'Newsreader',serif;font-weight:600;font-size:18px;color:#f7efe0;line-height:1.1;">Schedule a meeting</div>
+            <div style="font-size:12px;color:#9c9080;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Free Transformative Conversation with Roger</div>
+          </div>
+        </div>
+        <button data-modal-close="" type="button" aria-label="Close" style="flex-shrink:0;width:38px;height:38px;border-radius:999px;border:1px solid rgba(231,212,176,0.16);background:rgba(231,212,176,0.05);color:#d6c9b3;font-size:16px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .2s ease, color .2s ease, transform .2s ease;" style-hover="background:rgba(231,212,176,0.12);color:#f7efe0;transform:rotate(90deg);">✕</button>
+      </div>
+      <div style="position:relative;flex:1;background:#ffffff;">
+        <div data-modal-loading="" style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#14100c;color:#a99c88;transition:opacity .3s ease;">
+          <span style="width:30px;height:30px;border-radius:999px;border:3px solid rgba(205,161,85,0.25);border-top-color:var(--accent,#cda155);animation:spin 0.9s linear infinite;display:inline-block;"></span>
+          <span style="font-size:14px;">Loading the calendar…</span>
+        </div>
+        <iframe data-modal-iframe="" title="Schedule a meeting with Roger Mehl" style="position:relative;z-index:1;width:100%;height:100%;border:0;display:block;"></iframe>
+      </div>
+      <div style="padding:11px 18px;border-top:1px solid rgba(231,212,176,0.1);text-align:center;font-size:12.5px;color:#9c9080;">
+        Trouble loading? <a data-modal-link="" href="https://calendly.com/roger-coachmehl/intro" target="_blank" rel="noopener" style="color:var(--accent,#cda155);text-decoration:none;font-weight:600;">Open the scheduler in a new tab ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;calendlyUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://calendly.com/roger-coachmehl/intro&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;accentTheme&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;gold&quot;, &quot;options&quot;: [&quot;gold&quot;, &quot;amber&quot;], &quot;tsType&quot;: &quot;string&quot;}, &quot;showPlaceholders&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = (this.props.accentTheme === 'amber') ? '#e0913f' : '#cda155';
+    return {
+      accentColor: accent,
+      showPlaceholders: this.props.showPlaceholders ?? true,
+      problems: [
+        { h: "Everything feels urgent", p: "Too many tabs open — in your browser and in your head. Everything screams for attention, and nothing feels finished.", delay: 0 },
+        { h: "Focus that won't stay put", p: "You can disappear for hours into what excites you, then lose a whole afternoon to a single email you couldn't start.", delay: 80 },
+        { h: "The pressure cooker", p: "Expectations are high and rising. The gap between what you can do and what you're doing creates a quiet, constant stress.", delay: 160 },
+        { h: "The shame spiral", p: "You've tried the apps, the planners, the willpower. When they don't stick, you quietly blame yourself — again.", delay: 240 },
+      ],
+      strengths: [
+        { n: "01", h: "Hyperfocus", p: "When something clicks, you do a week's work in an afternoon. We learn to aim that beam on purpose.", delay: 0 },
+        { n: "02", h: "Big-picture vision", p: "You see the whole board and the connections others miss. Strategy is your home turf.", delay: 60 },
+        { n: "03", h: "Rapid ideation", p: "Ten ideas before breakfast. The trick was never having them — it's choosing and shipping.", delay: 120 },
+        { n: "04", h: "Creative connection", p: "You link ideas across worlds and make leaps that feel obvious only after you've said them.", delay: 180 },
+        { n: "05", h: "Grace under fire", p: "Crisis is where you get calm and clear. High stakes wake you up instead of shutting you down.", delay: 240 },
+        { n: "06", h: "Deep empathy", p: "You read the room and feel what others feel — a quiet superpower on any team.", delay: 300 },
+      ],
+      pillars: [
+        { icon: "☼", title: "Awaken", delay: 0, items: [
+          "To the brilliance of the ADHD mind",
+          "To what life is like after shedding the externally imposed shame of seeing your brain-type as a disorder",
+          "To a new way of being productive that respects the speed, intuitiveness, and action-ready character of your ADHD-type brain",
+        ] },
+        { icon: "↯", title: "Activate", delay: 120, items: [
+          "Start producing within the rhythm and flow of your natural focus state",
+          "Develop high-performance habits customized for ADHD brain types",
+          "Hone in on the rituals that maximize the full potential of your ADHD powers",
+        ] },
+        { icon: "✧", title: "Actualize", delay: 240, items: [
+          "Become the vision you never dared to dream of",
+          "Skip past the expectations of other types of thinkers and become something on a different dimension",
+          "Be what you were meant to be before someone told you that you had a disorder",
+        ] },
+      ],
+      cases: [
+        { metric: "60%", label: "increase in billable hours", quote: "I stopped trying to get all my work done during conventional work hours and followed my hyperfocus rhythm instead.", initial: "D", name: "David", role: "Litigation Lawyer", delay: 0 },
+        { metric: "180°", label: "shift in focus", quote: "I reallocated where I invest my ADHD creative horsepower from logistics to transformational community projects.", initial: "T", name: "Teddy", role: "NFP Executive Director", delay: 80 },
+        { metric: "4×", label: "follower acquisition", quote: "I dusted the 'self-doubt' off my self esteem. My creativity exploded and I posted more consistently.", initial: "I", name: "Isaac Z.", role: "Influencer/Videographer", delay: 160 },
+      ],
+      testimonials: [
+        { quote: "Coach Mehl gets it because he lives it. He's the first coach who didn't try to turn me into someone else.", name: "J.R.", role: "Product Lead", delay: 0 },
+        { quote: "Twenty-eight years of coaching instinct, pointed right at the thing that was holding me back.", name: "E.W.", role: "Brand Strategy Consultant", delay: 80 },
+        { quote: "I came in exhausted and ashamed. I left with a plan and, honestly, a little proud of my brain.", name: "L.M.", role: "Management Consultant", delay: 160 },
+      ],
+      whoItems: [
+        { t: "You're a high-functioning professional who knows you're operating below your potential.", delay: 0 },
+        { t: "You've been diagnosed with ADHD — or you strongly suspect it.", delay: 80 },
+        { t: "Generic productivity advice has failed you, and you're tired of blaming yourself for it.", delay: 160 },
+        { t: "You're ready to build a system around your real brain, not a borrowed one.", delay: 240 },
+      ],
+    };
+  }
+
+  componentDidMount() {
+    this._root = document.querySelector('[data-root]');
+    this.applyAccent();
+    this.wireBooking();
+    this.initReveal();
+    this.initScroll();
+    this.initPillarHover();
+    this.initInlineCal();
+    const y = document.querySelector('[data-year]');
+    if (y) y.textContent = new Date().getFullYear();
+  }
+
+  componentDidUpdate() {
+    this.applyAccent();
+    this.wireBooking();
+    this.initPillarHover();
+  }
+
+  bookingUrl() {
+    return (this.props.calendlyUrl || 'https://calendly.com/roger-coachmehl/intro').trim();
+  }
+
+  embedUrl() {
+    const base = this.bookingUrl();
+    const join = base.indexOf('?') === -1 ? '?' : '&';
+    return base + join + 'hide_gdpr_banner=1&background_color=14100c&text_color=f2e8d7&primary_color=cda155';
+  }
+
+  initInlineCal() {
+    const box = document.querySelector('[data-inline-cal]');
+    if (!box || box.__inited) return;
+    box.__inited = true;
+    const iframe = box.querySelector('[data-inline-iframe]');
+    const loading = box.querySelector('[data-inline-loading]');
+    if (!iframe) return;
+    if (loading) iframe.addEventListener('load', () => { loading.style.opacity = '0'; loading.style.pointerEvents = 'none'; });
+    const load = () => { if (!iframe.getAttribute('src')) iframe.setAttribute('src', this.embedUrl()); };
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { load(); io.disconnect(); } });
+      }, { rootMargin: '300px 0px' });
+      io.observe(box);
+      // fallback: ensure it loads even if observer never fires
+      setTimeout(load, 2500);
+    } else {
+      load();
+    }
+  }
+
+  openModal() {
+    const m = document.querySelector('[data-modal]');
+    if (!m) return;
+    const url = this.bookingUrl();
+    const iframe = m.querySelector('[data-modal-iframe]');
+    const loading = m.querySelector('[data-modal-loading]');
+    const link = m.querySelector('[data-modal-link]');
+    if (link) link.setAttribute('href', url);
+    const embed = this.embedUrl();
+    if (iframe && iframe.getAttribute('src') !== embed) {
+      if (loading) { loading.style.opacity = '1'; loading.style.pointerEvents = 'auto'; }
+      iframe.setAttribute('src', embed);
+    }
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    window.requestAnimationFrame(() => {
+      const b = m.querySelector('[data-modal-backdrop]');
+      if (b) b.style.opacity = '1';
+      const c = m.querySelector('[data-modal-card]');
+      if (c) { c.style.opacity = '1'; c.style.transform = 'none'; }
+    });
+  }
+
+  closeModal() {
+    const m = document.querySelector('[data-modal]');
+    if (!m || m.style.display === 'none') return;
+    const b = m.querySelector('[data-modal-backdrop]');
+    if (b) b.style.opacity = '0';
+    const c = m.querySelector('[data-modal-card]');
+    if (c) { c.style.opacity = '0'; c.style.transform = 'translateY(22px) scale(.97)'; }
+    document.body.style.overflow = '';
+    setTimeout(() => { m.style.display = 'none'; }, 380);
+  }
+
+  applyAccent() {
+    if (this._root) {
+      this._root.style.setProperty('--accent', (this.props.accentTheme === 'amber') ? '#e0913f' : '#cda155');
+    }
+  }
+
+  wireBooking() {
+    document.querySelectorAll('[data-book]').forEach((a) => {
+      if (a.__bookBound) return;
+      a.__bookBound = true;
+      a.addEventListener('click', (e) => { e.preventDefault(); this.openModal(); });
+    });
+    const m = document.querySelector('[data-modal]');
+    if (m && !m.__bound) {
+      m.__bound = true;
+      const backdrop = m.querySelector('[data-modal-backdrop]');
+      if (backdrop) backdrop.addEventListener('click', () => this.closeModal());
+      m.querySelectorAll('[data-modal-close]').forEach((btn) => btn.addEventListener('click', () => this.closeModal()));
+      const iframe = m.querySelector('[data-modal-iframe]');
+      const loading = m.querySelector('[data-modal-loading]');
+      if (iframe && loading) {
+        iframe.addEventListener('load', () => { loading.style.opacity = '0'; loading.style.pointerEvents = 'none'; });
+      }
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') this.closeModal(); });
+    }
+  }
+
+  initPillarHover() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('[data-pillar-card]').forEach((card) => {
+      if (card.__pillBound) return;
+      card.__pillBound = true;
+      card.style.transition = 'transform .45s cubic-bezier(.22,.61,.36,1), background .45s ease, border-color .45s ease, box-shadow .45s ease, opacity .6s ease';
+      const ink = card.querySelectorAll('[data-pill-ink]');
+      const dots = card.querySelectorAll('[data-pill-dot]');
+      const icon = card.querySelector('[data-pill-icon]');
+      const enter = () => {
+        const a = (getComputedStyle(this._root).getPropertyValue('--accent').trim()) || '#cda155';
+        card.style.background = a;
+        card.style.borderColor = a;
+        if (!reduce) card.style.transform = 'translateY(-4px)';
+        card.style.boxShadow = '0 16px 34px -20px rgba(205,161,85,0.5)';
+        ink.forEach((el) => { el.style.color = '#1c1509'; });
+        dots.forEach((el) => { el.style.color = 'rgba(28,21,9,0.55)'; });
+        if (icon) { icon.style.color = '#1c1509'; icon.style.background = 'rgba(28,21,9,0.14)'; icon.style.borderColor = 'rgba(28,21,9,0.28)'; }
+      };
+      const leave = () => {
+        card.style.background = '#1d1712';
+        card.style.borderColor = 'rgba(231,212,176,0.1)';
+        card.style.transform = 'none';
+        card.style.boxShadow = 'none';
+        ink.forEach((el) => { el.style.color = (el.tagName === 'H3') ? '#f3ead9' : '#bdb29e'; });
+        dots.forEach((el) => { el.style.color = 'var(--accent,#cda155)'; });
+        if (icon) { icon.style.color = 'var(--accent,#cda155)'; icon.style.background = 'rgba(205,161,85,0.1)'; icon.style.borderColor = 'rgba(205,161,85,0.25)'; }
+      };
+      card.addEventListener('mouseenter', enter);
+      card.addEventListener('mouseleave', leave);
+    });
+  }
+
+  showEl(el) {
+    if (el.__shown) return;
+    el.__shown = true;
+    const d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+    el.style.transitionDelay = d + 'ms';
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  }
+
+  checkReveal() {
+    if (!this._revealEls || !this._revealEls.length) return;
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    this._revealEls = this._revealEls.filter((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > -40) { this.showEl(el); return false; }
+      return true;
+    });
+  }
+
+  initReveal() {
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return; // leave fully visible
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.style.transition = 'opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1)';
+      el.style.willChange = 'opacity, transform';
+    });
+    this._revealEls = els;
+    // IntersectionObserver handles reveal regardless of which ancestor
+    // scrolls (works inside the editor's scaled wrapper too).
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { this.showEl(e.target); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+      els.forEach((el) => io.observe(el));
+    }
+    // rect-based fallback for plain window scrolling on the deployed site.
+    window.requestAnimationFrame(() => this.checkReveal());
+    setTimeout(() => this.checkReveal(), 300);
+    setTimeout(() => this.checkReveal(), 1100);
+  }
+
+  initScroll() {
+    const nav = document.querySelector('[data-nav]');
+    const heroImg = document.querySelector('[data-hero-img]');
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let ticking = false;
+    const toTop = document.querySelector('[data-to-top]');
+    const showToTopAt = 480;
+    const onScroll = () => {
+      this.checkReveal();
+      const y = window.scrollY || window.pageYOffset || 0;
+      if (nav) {
+        if (y > 40) {
+          nav.style.background = 'rgba(13,10,7,0.68)';
+          nav.style.backdropFilter = 'blur(20px) saturate(160%)';
+          nav.style.webkitBackdropFilter = 'blur(20px) saturate(160%)';
+          nav.style.boxShadow = '0 14px 40px -26px rgba(0,0,0,0.9)';
+          nav.style.borderBottomColor = 'rgba(231,212,176,0.14)';
+        } else {
+          nav.style.background = 'rgba(14,11,8,0.22)';
+          nav.style.backdropFilter = 'blur(6px) saturate(120%)';
+          nav.style.webkitBackdropFilter = 'blur(6px) saturate(120%)';
+          nav.style.boxShadow = 'none';
+          nav.style.borderBottomColor = 'rgba(231,212,176,0.04)';
+        }
+      }
+      if (heroImg && !reduce && y < 900) {
+        heroImg.style.transform = 'translateY(' + (y * 0.05) + 'px) scale(1.06)';
+      }
+      if (toTop) {
+        if (y > showToTopAt) {
+          toTop.style.opacity = '1';
+          toTop.style.transform = 'none';
+          toTop.style.pointerEvents = 'auto';
+        } else {
+          toTop.style.opacity = '0';
+          toTop.style.transform = 'translateY(14px)';
+          toTop.style.pointerEvents = 'none';
+        }
+      }
+      ticking = false;
+    };
+    const trigger = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    };
+    // Capture phase so scrolls on ANY ancestor scroll container (e.g. the
+    // editor's nested wrapper) are caught, not just window scrolls.
+    window.addEventListener('scroll', trigger, { passive: true, capture: true });
+    document.addEventListener('scroll', trigger, { passive: true, capture: true });
+    onScroll();
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+# Yermi Mel Landing Page — Setup Guide
+
+This is a plain HTML website (no WordPress, no build tools needed).
+Two quick steps to make it live with working bookings.
+
+---------------------------------------------------------------
+STEP 1 — Connect Calendly (makes the "Book a discovery call"
+         buttons work: stores leads + emails Yermi + adds to
+         his calendar, automatically)
+---------------------------------------------------------------
+
+1. Yermi creates a free account at https://calendly.com and
+   connects his Google or Outlook calendar.
+
+2. He creates an event type (e.g. "Discovery Call", 30 min) and
+   sets his availability. Calendly gives him a link that looks
+   like:
+        https://calendly.com/yermi-mel/discovery-call
+
+3. Open the file  index.html  in any text editor.
+   Near the very BOTTOM, find this line:
+
+        var CALENDLY_URL = "";
+
+   Paste the link between the quotes:
+
+        var CALENDLY_URL = "https://calendly.com/yermi-mel/discovery-call";
+
+   Save the file. Done — every "Book a discovery call" button now
+   opens his booking page. Every booking is emailed to Yermi and
+   added to his calendar by Calendly. No database needed.
+
+   (If you leave it empty, the buttons simply scroll down to the
+   contact section — the page still works.)
+
+---------------------------------------------------------------
+STEP 2 — Put it online (on your own URL)
+---------------------------------------------------------------
+
+Easiest, free, ~15 minutes, no coding:
+
+1. Go to https://app.netlify.com/drop
+2. Drag this WHOLE folder (the one containing index.html and the
+   /assets folder) onto the page.
+3. You instantly get a live link. To use your own domain, follow
+   Netlify's "Add custom domain" prompt.
+
+(Alternative: Cloudflare Pages works the same way and is also free.)
+
+---------------------------------------------------------------
+BEFORE GOING PUBLIC — content to replace
+---------------------------------------------------------------
+
+The page is fully built, but a few items are realistic
+placeholders. Open index.html and search for the text to update:
+
+- Email address:   hello@yermimel.com   -> Yermi's real email
+- Case studies:    the "60% / 2x / 4 hrs" stories (marked
+                   "Illustrative examples") -> real client results
+- Testimonials:    the J.R. / D.K. / L.M. quotes -> real quotes
+- Book excerpt:    "The Brilliant Brain" chapter (marked
+                   "swap in Yermi's real chapter")
+
+---------------------------------------------------------------
+FILES
+---------------------------------------------------------------
+
+index.html        The whole page (HTML + styles in one file)
+assets/yermi.png  Yermi's photo (keep it in the /assets folder)
+
+Keep these together. That's the entire website.

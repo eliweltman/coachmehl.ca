@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yermi Mel — ADHD Coaching for Professionals</title>
+<meta name="description" content="Harness the power of your creative brilliance. Bespoke ADHD coaching for professionals, rooted in neuroscience.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Yermi Mel — Landing Page
+   Direction: "Reframe" (warm terracotta / cream)
+   Fonts: Schibsted Grotesk (display) + Hanken Grotesk (body)
+   ============================================================ */
+
+:root {
+  --bg:          #f7f3ee;
+  --surface:     #ffffff;
+  --ink:         #241c15;
+  --muted:       #6f6457;
+  --accent:      #c4622e;
+  --accent-ink:  #ffffff;
+  --accent-soft: #f4e7dc;
+  --accent-light:#e8a072;
+  --line:        #ebe2d6;
+  --dark:        #221a13;
+
+  --maxw: 1180px;
+  --pad:  clamp(24px, 5vw, 48px);
+  --font-body:    'Hanken Grotesk', system-ui, sans-serif;
+  --font-display: 'Schibsted Grotesk', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+::selection { background: var(--dark); color: #fff; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 20px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pill .dot {
+  width: 7px; height: 7px; border-radius: 999px;
+  background: var(--accent); display: inline-block;
+}
+
+/* Buttons --------------------------------------------------- */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  border-radius: 999px;
+  transition: background .18s ease, transform .18s ease;
+}
+.btn:hover { background: #a8511f; transform: translateY(-1px); }
+.btn--nav { font-size: 15px; padding: 11px 20px; }
+.btn--lg  { font-size: 17px; padding: 16px 30px; }
+.btn--xl  { font-size: 18px; padding: 18px 36px; }
+
+.link-arrow {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.link-arrow span { color: var(--accent); transition: transform .18s ease; }
+.link-arrow:hover span { transform: translateX(4px); }
+
+/* Nav ------------------------------------------------------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px;
+}
+.brand { text-decoration: none; color: var(--ink); display: flex; flex-direction: column; line-height: 1.1; }
+.brand__name { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+.brand__tag  { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.nav__links { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 32px); flex-wrap: wrap; }
+.nav__links a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; transition: color .15s ease; }
+.nav__links a:hover { color: var(--ink); }
+
+/* Section rhythm -------------------------------------------- */
+.section { padding: clamp(80px, 11vh, 150px) 0; }
+.section--tight { padding: clamp(70px, 9vh, 120px) 0; }
+.section--line { border-top: 1px solid var(--line); }
+.section--soft { background: var(--accent-soft); }
+.section--surface { background: var(--surface); }
+.section--dark { background: var(--dark); color: var(--bg); }
+
+.section-head { max-width: 38em; }
+.section-head--center { margin: 0 auto 64px; text-align: center; }
+.section-title {
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+}
+.lede { font-size: clamp(17px, 1.4vw, 20px); color: var(--muted); margin: 0; }
+
+/* Hero ------------------------------------------------------ */
+.hero { padding: clamp(56px, 8vh, 104px) 0 clamp(60px, 9vh, 120px); }
+.hero__inner { display: flex; align-items: center; gap: clamp(40px, 5vw, 76px); flex-wrap: wrap; }
+.hero__copy { flex: 1 1 440px; min-width: 300px; }
+.hero__pill { margin-bottom: 28px; }
+.hero__title { font-weight: 700; font-size: clamp(40px, 5.8vw, 74px); line-height: 1.02; letter-spacing: -0.025em; margin: 0 0 26px; }
+.hero__lede { font-size: clamp(18px, 1.5vw, 21px); color: var(--muted); margin: 0 0 36px; max-width: 30em; }
+.hero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hero__meta { margin-top: 40px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
+.hero__meta b { color: var(--accent); font-weight: 700; }
+.hero__meta .sep { width: 4px; height: 4px; border-radius: 999px; background: var(--line); }
+
+.hero__media { flex: 1 1 360px; min-width: 300px; position: relative; }
+.hero__media::before {
+  content: ""; position: absolute; inset: 18px -18px -18px 18px;
+  background: var(--accent-soft); border-radius: 30px;
+}
+.hero__frame {
+  position: relative; border-radius: 28px; overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.25);
+}
+.hero__frame img { width: 100%; aspect-ratio: 5/6; object-fit: cover; object-position: 50% 22%; }
+.hero__card {
+  position: absolute; left: 18px; bottom: 18px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-radius: 16px; padding: 12px 16px;
+}
+.hero__card .name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ink); }
+.hero__card .role { font-size: 12px; color: var(--muted); }
+
+/* Grids ----------------------------------------------------- */
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid--3 { gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: clamp(26px, 3vw, 36px);
+}
+.card h3 { font-weight: 600; font-size: 21px; letter-spacing: -0.01em; margin: 0 0 12px; }
+.card p  { font-size: 16px; color: var(--muted); margin: 0; }
+
+/* Reframe (dark) strengths grid ----------------------------- */
+.reframe__title { color: #fff; font-weight: 700; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.04; letter-spacing: -0.025em; margin: 0 0 24px; max-width: 15em; }
+.reframe__lede  { font-size: clamp(18px, 1.5vw, 21px); margin: 0 0 64px; max-width: 38em; color: color-mix(in srgb, var(--bg) 78%, transparent); }
+.eyebrow--light { color: var(--accent-light); }
+
+.strengths {
+  display: grid; gap: 1px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  background: color-mix(in srgb, var(--bg) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--bg) 16%, transparent);
+  border-radius: 22px; overflow: hidden;
+}
+.strength { background: var(--dark); padding: clamp(26px, 2.6vw, 34px); }
+.strength__n { font-family: var(--font-display); font-weight: 700; font-size: 13px; color: var(--accent-light); margin: 0 0 14px; }
+.strength h3 { color: #fff; font-weight: 600; font-size: 20px; letter-spacing: -0.01em; margin: 0 0 10px; }
+.strength p  { font-size: 15px; margin: 0; line-height: 1.6; color: color-mix(in srgb, var(--bg) 70%, transparent); }
+
+/* Method ---------------------------------------------------- */
+.steps { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.step {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 24px; padding: clamp(30px, 3vw, 40px);
+  display: flex; flex-direction: column;
+}
+.step__head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; }
+.step__n {
+  font-family: var(--font-display); font-weight: 800; font-size: 15px;
+  color: var(--accent-ink); background: var(--accent);
+  width: 40px; height: 40px; border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.step h3 { font-weight: 700; font-size: 26px; letter-spacing: -0.02em; margin: 0; }
+.step p  { font-size: 16px; color: var(--muted); margin: 0; line-height: 1.65; }
+
+/* About ----------------------------------------------------- */
+.about__inner { display: flex; gap: clamp(40px, 5vw, 72px); flex-wrap: wrap; align-items: flex-start; }
+.about__media { flex: 1 1 320px; min-width: 280px; position: sticky; top: 90px; }
+.about__frame { border-radius: 24px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 50px -30px rgba(0,0,0,0.3); }
+.about__frame img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 18%; }
+.about__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+.stat b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--ink); }
+.stat span { font-size: 13px; color: var(--muted); }
+.about__body { flex: 1 1 440px; min-width: 300px; }
+.about__body h2 { font-weight: 700; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.06; margin: 0 0 28px; max-width: 14em; }
+.about__prose { font-size: clamp(16px, 1.3vw, 18px); line-height: 1.7; display: flex; flex-direction: column; gap: 18px; }
+.about__prose p { margin: 0; }
+.about__prose .muted { color: var(--muted); }
+.about__prose strong { color: var(--accent); font-weight: 600; }
+
+/* Case studies ---------------------------------------------- */
+.disclaimer { font-size: 14px; color: var(--muted); margin: 0 0 56px; font-style: italic; }
+.case {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 24px; padding: clamp(28px, 3vw, 38px);
+  display: flex; flex-direction: column;
+}
+.case__metric { font-family: var(--font-display); font-weight: 800; font-size: clamp(36px, 4vw, 48px); line-height: 1; letter-spacing: -0.03em; color: var(--accent); margin-bottom: 6px; }
+.case__metric-label { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.case__quote { font-size: 17px; color: var(--ink); margin: 0 0 24px; line-height: 1.6; flex: 1; }
+.case__person { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 20px; }
+.avatar {
+  width: 38px; height: 38px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; font-family: var(--font-display);
+}
+.case__person .name { font-weight: 600; font-size: 15px; }
+.case__person .role { font-size: 13px; color: var(--muted); }
+
+/* Testimonials ---------------------------------------------- */
+.quotes { display: grid; gap: clamp(28px, 4vw, 56px); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.quote { margin: 0; }
+.quote .mark { font-family: var(--font-display); font-weight: 800; font-size: 48px; line-height: 0.6; color: var(--accent-light); }
+.quote blockquote { margin: 8px 0 20px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: var(--ink); font-weight: 500; }
+.quote figcaption { font-size: 14px; color: var(--muted); }
+.quote figcaption b { color: var(--ink); font-weight: 600; }
+
+/* Who it's for ---------------------------------------------- */
+.who__inner { display: flex; gap: clamp(40px, 5vw, 72px); flex-wrap: wrap; }
+.who__head { flex: 1 1 320px; min-width: 280px; }
+.who__list { flex: 1 1 420px; min-width: 300px; display: flex; flex-direction: column; gap: 14px; }
+.who__item { display: flex; align-items: flex-start; gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; }
+.who__check {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; margin-top: 1px;
+}
+.who__item span:last-child { font-size: 17px; color: var(--ink); line-height: 1.5; }
+
+/* From the book --------------------------------------------- */
+.book__inner { max-width: 840px; }
+.book__title { color: #fff; font-weight: 700; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.08; margin: 0 0 8px; }
+.book__title .wip { color: color-mix(in srgb, var(--bg) 45%, transparent); font-weight: 500; }
+.book__chapter { font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 40px; }
+.book__prose { font-size: clamp(18px, 1.6vw, 22px); line-height: 1.75; color: color-mix(in srgb, var(--bg) 86%, transparent); display: flex; flex-direction: column; gap: 24px; }
+.book__prose p { margin: 0; }
+.book__prose .dropcap { float: left; font-family: var(--font-display); font-weight: 800; font-size: 74px; line-height: 0.78; color: var(--accent-light); margin: 6px 16px 0 0; }
+.book__note { font-size: 14px; color: color-mix(in srgb, var(--bg) 45%, transparent); margin: 40px 0 0; font-style: italic; }
+
+/* Final CTA ------------------------------------------------- */
+.cta { padding: clamp(90px, 13vh, 170px) 0; text-align: center; }
+.cta__inner { max-width: 720px; }
+.cta__pill { margin-bottom: 28px; }
+.cta__title { font-weight: 700; font-size: clamp(34px, 5vw, 60px); line-height: 1.03; letter-spacing: -0.025em; margin: 0 0 22px; }
+.cta__lede { font-size: clamp(18px, 1.5vw, 21px); color: var(--muted); margin: 0 0 40px; }
+.cta__email { font-size: 15px; color: var(--muted); margin: 24px 0 0; }
+.cta__email a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+/* Footer ---------------------------------------------------- */
+.footer { border-top: 1px solid var(--line); padding: 48px 0; }
+.footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer__brand { font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+.footer__sub { font-size: 13px; color: var(--muted); }
+.footer__motto { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.footer__copy { font-size: 13px; color: var(--muted); }
+
+/* Utility --------------------------------------------------- */
+.mb-14 { margin-bottom: 14px; }
+.maxw-16 { max-width: 16em; }
+.maxw-34 { max-width: 34em; }
+.maxw-15 { max-width: 15em; }
+.center { text-align: center; }
+
+/* Stack the sticky about image on small screens */
+@media (max-width: 760px) {
+  .about__media { position: static; top: auto; }
+}
+</style>
+</head>
+
+<body id="top">
+
+<!-- ====================== NAV ====================== -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="brand">
+      <span class="brand__name">Yermi Mel</span>
+      <span class="brand__tag">ADHD Coaching</span>
+    </a>
+    <div class="nav__links">
+      <a href="#reframe">The Reframe</a>
+      <a href="#method">The Method</a>
+      <a href="#about">About Yermi</a>
+      <a href="#stories">Stories</a>
+      <a href="#book" data-book class="btn btn--nav">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<header class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <div class="pill hero__pill">
+        <span class="dot"></span>
+        <span>Awaken &middot; Activate &middot; Actualize</span>
+      </div>
+      <h1 class="hero__title">Harness the power of your creative brilliance.</h1>
+      <p class="hero__lede">Become organized, clear-minded, and effective in the world &mdash; without grinding against the way your brain actually works. Bespoke ADHD coaching for professionals, rooted in neuroscience.</p>
+      <div class="hero__actions">
+        <a href="#book" data-book class="btn btn--lg">Book a discovery call</a>
+        <a href="#method" class="link-arrow">See how it works <span>&rarr;</span></a>
+      </div>
+      <div class="hero__meta">
+        <span><b>28</b> years coaching</span>
+        <span class="sep"></span>
+        <span>1:1 &amp; fully bespoke</span>
+        <span class="sep"></span>
+        <span>Toronto &amp; online</span>
+      </div>
+    </div>
+    <div class="hero__media">
+      <div class="hero__frame">
+        <img src="assets/yermi.png" alt="Yermi Mel, ADHD coach">
+        <div class="hero__card">
+          <div class="name">Yermi Mel</div>
+          <div class="role">ADHD Coach &amp; Bridger</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== THE PROBLEM ====================== -->
+<section id="problem" class="section section--line">
+  <div class="container">
+    <p class="eyebrow">The struggle is real</p>
+    <h2 class="section-title maxw-16">You're capable of so much. So why does everything feel so hard?</h2>
+    <p class="lede maxw-34" style="margin-bottom:56px;">If any of this lands a little too close to home, you're not broken &mdash; and you're not alone.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Everything feels urgent</h3>
+        <p>Too many tabs open &mdash; in your browser and in your head. Everything screams for attention, and nothing feels finished.</p>
+      </div>
+      <div class="card">
+        <h3>Focus that won't stay put</h3>
+        <p>You can disappear for hours into what excites you, then lose a whole afternoon to a single email you couldn't start.</p>
+      </div>
+      <div class="card">
+        <h3>The pressure cooker</h3>
+        <p>Expectations are high and rising. The gap between what you can do and what you're doing creates a quiet, constant stress.</p>
+      </div>
+      <div class="card">
+        <h3>The shame spiral</h3>
+        <p>You've tried the apps, the planners, the willpower. When they don't stick, you quietly blame yourself &mdash; again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== THE REFRAME ====================== -->
+<section id="reframe" class="section section--dark">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">The reframe</p>
+    <h2 class="reframe__title">Your ADHD isn't a flaw to fix. It's horsepower waiting to be harnessed.</h2>
+    <p class="reframe__lede">The same wiring behind the overwhelm is the source of your edge. We don't try to make you &ldquo;normal.&rdquo; We build a system around the brain you actually have &mdash; so your gifts do the heavy lifting.</p>
+    <div class="strengths">
+      <div class="strength">
+        <div class="strength__n">01</div>
+        <h3>Hyperfocus</h3>
+        <p>When something clicks, you do a week's work in an afternoon. We learn to aim that beam on purpose.</p>
+      </div>
+      <div class="strength">
+        <div class="strength__n">02</div>
+        <h3>Big-picture vision</h3>
+        <p>You see the whole board and the connections others miss. Strategy is your home turf.</p>
+      </div>
+      <div class="strength">
+        <div class="strength__n">03</div>
+        <h3>Rapid ideation</h3>
+        <p>Ten ideas before breakfast. The trick was never having them &mdash; it's choosing and shipping.</p>
+      </div>
+      <div class="strength">
+        <div class="strength__n">04</div>
+        <h3>Creative connection</h3>
+        <p>You link ideas across worlds and make leaps that feel obvious only after you've said them.</p>
+      </div>
+      <div class="strength">
+        <div class="strength__n">05</div>
+        <h3>Grace under fire</h3>
+        <p>Crisis is where you get calm and clear. High stakes wake you up instead of shutting you down.</p>
+      </div>
+      <div class="strength">
+        <div class="strength__n">06</div>
+        <h3>Deep empathy</h3>
+        <p>You read the room and feel what others feel &mdash; a quiet superpower on any team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== THE METHOD ====================== -->
+<section id="method" class="section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">The method</p>
+      <h2 class="section-title">A path built around you.</h2>
+      <p class="lede">Three stages, fully customized to your circumstance. No off-the-shelf templates &mdash; just a system that finally fits.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__head">
+          <span class="step__n">01</span>
+          <h3>Awaken</h3>
+        </div>
+        <p>Understand your brain. We map how your attention, motivation, and energy actually work &mdash; replacing self-blame with self-knowledge.</p>
+      </div>
+      <div class="step">
+        <div class="step__head">
+          <span class="step__n">02</span>
+          <h3>Activate</h3>
+        </div>
+        <p>Build your bespoke system. Together we design tools, structures, and routines that fit your real life &mdash; not a generic template.</p>
+      </div>
+      <div class="step">
+        <div class="step__head">
+          <span class="step__n">03</span>
+          <h3>Actualize</h3>
+        </div>
+        <p>Live it. With accountability and ongoing refinement, new patterns become second nature &mdash; and your goals become reality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== ABOUT YERMI ====================== -->
+<section id="about" class="section section--soft">
+  <div class="container about__inner">
+    <div class="about__media">
+      <div class="about__frame">
+        <img src="assets/yermi.png" alt="Yermi Mel">
+      </div>
+      <div class="about__stats">
+        <div class="stat"><b>28 yrs</b><span>coaching experience</span></div>
+        <div class="stat"><b>CEOs</b><span>&amp; leadership teams</span></div>
+      </div>
+    </div>
+    <div class="about__body">
+      <p class="eyebrow">About Yermi</p>
+      <h2>A coach who's spent 28 years helping people unlock themselves.</h2>
+      <div class="about__prose">
+        <p>Yermi Mel began by coaching performers &mdash; trained at the prestigious London Studio Centre &mdash; where he discovered a gift for helping people build deep internal awareness and refine their craft from the inside out.</p>
+        <p>He went on to lead year-long leadership programs for CEOs, founders, and management teams, where accountability became his signature. He built a &ldquo;laboratory&rdquo; approach to follow-through: when someone stalled, he looked for the real blockage underneath. Years of mentoring people through twelve-step recovery sharpened his eye for blind spots, unconscious decisions, and self-sabotage.</p>
+        <p>Yermi calls himself a <strong>bridger</strong> &mdash; a term from Dr. Lynn Weiss's <em>Embracing A.D.D.</em> He shares the ADHD wiring of the people he works with, and he's learned to translate it into the linear, structured world they have to operate in. He doesn't coach ADHD from a textbook. He coaches it from the inside.</p>
+        <p class="muted">Today he works with ADHD professionals full-time, grounding his practice in neuroscience and lived experience. He lives in Toronto with his wife and kids.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CASE STUDIES ====================== -->
+<section id="stories" class="section">
+  <div class="container">
+    <p class="eyebrow">Case studies</p>
+    <h2 class="section-title mb-14">Real professionals. Real transformation.</h2>
+    <p class="disclaimer">Illustrative examples &mdash; replace with Yermi's real client stories.</p>
+    <div class="grid--3" style="display:grid;">
+      <div class="case">
+        <div class="case__metric">60%</div>
+        <div class="case__metric-label">fewer dropped commitments</div>
+        <p class="case__quote">&ldquo;I stopped white-knuckling my calendar. For the first time, my system works with me instead of against me.&rdquo;</p>
+        <div class="case__person">
+          <span class="avatar">M</span>
+          <div>
+            <div class="name">M.</div>
+            <div class="role">Engineering Director</div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case__metric">2&times;</div>
+        <div class="case__metric-label">projects shipped per quarter</div>
+        <p class="case__quote">&ldquo;I always had the ideas. Now I actually finish them &mdash; and my team isn't waiting on me anymore.&rdquo;</p>
+        <div class="case__person">
+          <span class="avatar">S</span>
+          <div>
+            <div class="name">S.</div>
+            <div class="role">Founder</div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case__metric">4 hrs</div>
+        <div class="case__metric-label">of focused deep work, daily</div>
+        <p class="case__quote">&ldquo;The shame was the heaviest part. Yermi helped me set it down and finally get to the work.&rdquo;</p>
+        <div class="case__person">
+          <span class="avatar">A</span>
+          <div>
+            <div class="name">A.</div>
+            <div class="role">Senior Counsel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TESTIMONIALS ====================== -->
+<section class="section section--tight section--line section--surface">
+  <div class="container">
+    <div class="quotes">
+      <figure class="quote">
+        <span class="mark">&ldquo;</span>
+        <blockquote>Yermi gets it because he lives it. He's the first coach who didn't try to turn me into someone else.</blockquote>
+        <figcaption><b>J.R.</b> &middot; Product Lead</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="mark">&ldquo;</span>
+        <blockquote>Twenty-eight years of coaching instinct, pointed right at the thing that was holding me back.</blockquote>
+        <figcaption><b>D.K.</b> &middot; Agency Owner</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="mark">&ldquo;</span>
+        <blockquote>I came in exhausted and ashamed. I left with a plan and, honestly, a little proud of my brain.</blockquote>
+        <figcaption><b>L.M.</b> &middot; Management Consultant</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WHO IT'S FOR ====================== -->
+<section class="section">
+  <div class="container who__inner">
+    <div class="who__head">
+      <p class="eyebrow">Who it's for</p>
+      <h2 class="section-title">Is this for you?</h2>
+      <p class="lede">This work is for high-functioning professionals who know there's more in the tank.</p>
+    </div>
+    <div class="who__list">
+      <div class="who__item">
+        <span class="who__check">&#10003;</span>
+        <span>You're a high-functioning professional who knows you're operating below your potential.</span>
+      </div>
+      <div class="who__item">
+        <span class="who__check">&#10003;</span>
+        <span>You've been diagnosed with ADHD &mdash; or you strongly suspect it.</span>
+      </div>
+      <div class="who__item">
+        <span class="who__check">&#10003;</span>
+        <span>Generic productivity advice has failed you, and you're tired of blaming yourself for it.</span>
+      </div>
+      <div class="who__item">
+        <span class="who__check">&#10003;</span>
+        <span>You're ready to build a system around your real brain, not a borrowed one.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FROM THE BOOK ====================== -->
+<section class="section section--dark">
+  <div class="container book__inner">
+    <p class="eyebrow eyebrow--light">From the book</p>
+    <h2 class="book__title">The Brilliant Brain <span class="wip">(working title)</span></h2>
+    <p class="book__chapter">Chapter One &middot; The Lie of the Lazy Genius</p>
+    <div class="book__prose">
+      <p><span class="dropcap">F</span>or most of your life you've been handed the same quiet verdict: you're so smart &mdash; if only you'd apply yourself. You nodded along. You believed it. And every missed deadline, every unanswered email, every brilliant idea that never made it out of your head became more evidence in a case you were building against yourself.</p>
+      <p>But what if the verdict is wrong? What if you have been applying yourself &mdash; ferociously, exhaustingly &mdash; just to keep pace with a world that was never designed for the way you think? The problem was never effort. The problem was the manual. You were handed someone else's, and told to make it work.</p>
+      <p>This book is a different manual. It starts with a single, radical premise: there is nothing about your mind that needs to be fixed. There is only a brilliance that hasn't yet been given the structure to shine.</p>
+    </div>
+    <p class="book__note">Excerpt is placeholder text &mdash; swap in Yermi's real chapter.</p>
+  </div>
+</section>
+
+<!-- ====================== FINAL CTA ====================== -->
+<section id="book" class="cta">
+  <div class="container cta__inner">
+    <div class="pill cta__pill">
+      <span class="dot"></span>
+      <span>Free 30-minute call</span>
+    </div>
+    <h2 class="cta__title">Ready to work with the brain you have?</h2>
+    <p class="cta__lede">No pressure, no jargon &mdash; just a real conversation about where you are and where you want to be.</p>
+    <a href="#book" data-book class="btn btn--xl">Book a discovery call</a>
+    <p class="cta__email">Prefer email? <a href="mailto:hello@yermimel.com">hello@yermimel.com</a></p>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <div class="footer__brand">Yermi Mel</div>
+      <div class="footer__sub">ADHD Coaching for Professionals &middot; Toronto, Canada</div>
+    </div>
+    <div class="footer__motto">Awaken &middot; Activate &middot; Actualize</div>
+    <div class="footer__copy">&copy; <span id="year">2026</span> Yermi Mel</div>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     SETUP — Calendly booking link
+     ------------------------------------------------------------
+     Replace the empty string below with Yermi's Calendly URL,
+     e.g. "https://calendly.com/yermi-mel/discovery-call"
+     Every "Book a discovery call" button will then open it in a
+     new tab. Leave it empty and the buttons just scroll to the
+     contact section at the bottom (current behaviour).
+     ============================================================ */
+  var CALENDLY_URL = "";
+
+  if (CALENDLY_URL) {
+    document.querySelectorAll('[data-book]').forEach(function (a) {
+      a.setAttribute('href', CALENDLY_URL);
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
