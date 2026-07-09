@@ -26,32 +26,47 @@
 
   <!-- ===================== NAV ===================== -->
   <nav data-nav="" style="position:sticky;top:0;z-index:60;background:rgba(14,11,8,0.22);backdrop-filter:blur(6px) saturate(120%);-webkit-backdrop-filter:blur(6px) saturate(120%);border-bottom:1px solid rgba(231,212,176,0.04);transition:background .5s ease, box-shadow .5s ease, border-color .5s ease, backdrop-filter .5s ease;">
-    <div style="max-width:1180px;margin:0 auto;padding:14px clamp(24px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-      <a href="#top" aria-label="Mehl Coaching home" style="text-decoration:none;display:inline-flex;align-items:center;">
+    <div style="max-width:1180px;margin:0 auto;padding:14px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <a href="#top" aria-label="Mehl Coaching home" style="text-decoration:none;display:inline-flex;align-items:center;flex-shrink:0;">
         <img src="assets/logo-gold.png" alt="Mehl Coaching" style="display:block;height:21px;width:auto;">
       </a>
-      <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;">
+      <div data-nav-links="" style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;">
         <a href="#reframe" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">The Reframe</a>
         <a href="#pillars" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">The Pillars</a>
         <a href="#about" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">About Roger</a>
         <a href="#stories" style="text-decoration:none;color:#a99c88;font-size:15px;font-weight:500;transition:color .2s ease;" style-hover="color:#f2e8d7;">Stories</a>
-        <a href="#book" data-book="" style="text-decoration:none;display:inline-block;white-space:nowrap;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;padding:10px 20px;font-size:15px;box-shadow:0 8px 22px -10px rgba(205,161,85,0.7);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;" style-hover="transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 14px 30px -10px rgba(205,161,85,0.85);">Schedule a meeting</a>
+        <a href="#book" data-book="" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;white-space:nowrap;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;padding:10px 20px;font-size:15px;box-shadow:0 8px 22px -10px rgba(205,161,85,0.7);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;" style-hover="transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 14px 30px -10px rgba(205,161,85,0.85);">Schedule a meeting</a>
       </div>
+      <button data-nav-toggle="" type="button" aria-label="Open menu" aria-expanded="false" style="display:none;width:44px;height:44px;flex-shrink:0;border-radius:12px;border:1px solid rgba(231,212,176,0.18);background:rgba(231,212,176,0.05);align-items:center;justify-content:center;cursor:pointer;padding:0;">
+        <span style="position:relative;width:20px;height:14px;display:inline-block;">
+          <span data-bar="0" style="position:absolute;left:0;top:0;width:100%;height:2px;background:#f2e8d7;border-radius:2px;transition:transform .3s ease, opacity .3s ease;"></span>
+          <span data-bar="1" style="position:absolute;left:0;top:6px;width:100%;height:2px;background:#f2e8d7;border-radius:2px;transition:transform .3s ease, opacity .3s ease;"></span>
+          <span data-bar="2" style="position:absolute;left:0;top:12px;width:100%;height:2px;background:#f2e8d7;border-radius:2px;transition:transform .3s ease, opacity .3s ease;"></span>
+        </span>
+      </button>
+    </div>
+    <div data-mobile-menu="" style="display:none;flex-direction:column;padding:4px clamp(20px,5vw,48px) 22px;gap:0;border-top:1px solid rgba(231,212,176,0.08);">
+      <a href="#reframe" data-mobile-link="" style="text-decoration:none;color:#e9dcc4;font-size:17px;font-weight:500;padding:0 4px;min-height:48px;display:flex;align-items:center;border-bottom:1px solid rgba(231,212,176,0.07);">The Reframe</a>
+      <a href="#pillars" data-mobile-link="" style="text-decoration:none;color:#e9dcc4;font-size:17px;font-weight:500;padding:0 4px;min-height:48px;display:flex;align-items:center;border-bottom:1px solid rgba(231,212,176,0.07);">The Pillars</a>
+      <a href="#about" data-mobile-link="" style="text-decoration:none;color:#e9dcc4;font-size:17px;font-weight:500;padding:0 4px;min-height:48px;display:flex;align-items:center;border-bottom:1px solid rgba(231,212,176,0.07);">About Roger</a>
+      <a href="#stories" data-mobile-link="" style="text-decoration:none;color:#e9dcc4;font-size:17px;font-weight:500;padding:0 4px;min-height:48px;display:flex;align-items:center;">Stories</a>
+      <a href="#book" data-book="" data-mobile-link="" style="text-decoration:none;margin-top:14px;text-align:center;display:flex;align-items:center;justify-content:center;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;padding:14px 20px;font-size:16px;min-height:48px;">Schedule a meeting</a>
     </div>
   </nav>
 
   <!-- ===================== HERO ===================== -->
-  <header id="top" style="position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:center;padding:clamp(96px,13vh,150px) 0 clamp(80px,11vh,120px);overflow:hidden;">
-    <div data-hero-bg="" aria-hidden="true" style="position:absolute;inset:0;background-image:url('assets/roger-skyline.png');background-size:cover;background-position:45% center;animation:slowZoom 30s ease-in-out infinite alternate;will-change:transform;"></div>
+  <header id="top" data-hero="" style="position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:center;padding:clamp(96px,13vh,150px) 0 clamp(80px,11vh,120px);overflow:hidden;">
+    <div data-hero-bg="" aria-hidden="true" style="position:absolute;inset:0;background-image:url('assets/roger-skyline.png');background-size:cover;background-position:45% center;animation:slowZoom 30s ease-in-out infinite alternate;will-change:transform, opacity;transition:background-position .4s ease;"></div>
     <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,8,5,0.9) 0%, rgba(11,8,5,0.64) 30%, rgba(11,8,5,0.3) 56%, rgba(11,8,5,0.08) 80%, rgba(11,8,5,0.16) 100%);"></div>
     <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(11,8,5,0.9) 0%, rgba(11,8,5,0.22) 28%, transparent 50%, transparent 74%, rgba(11,8,5,0.42) 100%);"></div>
+    <div data-hero-fade="" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(to top, rgba(20,16,12,0.4), transparent);pointer-events:none;transition:height .3s ease;"></div>
     <div style="position:relative;max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);width:100%;">
-      <div style="max-width:38em;">
+      <div data-hero-copy="" style="max-width:38em;transition:opacity .3s ease, transform .3s ease;">
         
         <h1 data-reveal="" data-reveal-delay="60" style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-0.012em;margin:0 0 26px;color:#f9f1e3;text-shadow:0 2px 18px rgba(0,0,0,0.5);">Discover, develop, and fan the flames of your inner brilliance.</h1>
         <p data-reveal="" data-reveal-delay="140" style="font-size:clamp(18px,1.5vw,21px);color:#ddd0bb;margin:0 0 36px;max-width:31em;text-shadow:0 1px 12px rgba(0,0,0,0.4);">I help ADHD executives turn the speed, intuition, and action-readiness of their brain into real-world effectiveness — without grinding against the way it actually works.</p>
         <div data-reveal="" data-reveal-delay="220" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-          <a href="#book" data-book="" style="text-decoration:none;display:inline-block;white-space:nowrap;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;font-size:17px;padding:15px 30px;box-shadow:0 14px 34px -14px rgba(205,161,85,0.75);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;" style-hover="transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 20px 42px -14px rgba(205,161,85,0.9);">Schedule a meeting</a>
+          <a href="#book" data-book="" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:48px;white-space:nowrap;background:var(--accent,#cda155);color:#17120c;font-weight:600;border-radius:999px;font-size:17px;padding:15px 30px;box-shadow:0 14px 34px -14px rgba(205,161,85,0.75);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;" style-hover="transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 20px 42px -14px rgba(205,161,85,0.9);">Schedule a meeting</a>
         </div>
         <div data-reveal="" data-reveal-delay="300" style="margin-top:42px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:#9c9080;font-size:14px;">
           <span><b style="color:var(--accent,#cda155);font-weight:700;">28</b> years coaching</span>
@@ -134,7 +149,7 @@
   <!-- ===================== ABOUT ROGER ===================== -->
   <section id="about" style="scroll-margin-top:84px;padding:clamp(80px,11vh,140px) 0;background:#19140f;border-top:1px solid rgba(231,212,176,0.08);border-bottom:1px solid rgba(231,212,176,0.08);">
     <div style="max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,48px);display:flex;gap:clamp(40px,5vw,72px);flex-wrap:wrap;align-items:flex-start;">
-      <div data-reveal="" style="flex:1 1 320px;min-width:280px;position:sticky;top:96px;">
+      <div data-reveal="" data-about-media="" style="flex:1 1 320px;min-width:280px;position:sticky;top:96px;">
         <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(231,212,176,0.12);box-shadow:0 34px 64px -38px rgba(0,0,0,0.85);">
           <img src="assets/roger-portrait.png" alt="Roger Mehl" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:58% 24%;">
         </div>
@@ -231,11 +246,11 @@
       <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin:0 0 8px;color:#f3ead9;">Executive Brilliance the ADHD Way <br><span style="color: rgb(111, 103, 87); font-weight: 500; font-style: italic;">(working title)</span></h2>
       <p style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#e0b070;margin:0 0 40px;">Chapter Three · Made With Heroes and Dragonslayers In Mind</p>
       <div style="font-family:'Newsreader',serif;font-size:clamp(18px,1.6vw,22px);line-height:1.8;color:#d6cbb7;display:flex;flex-direction:column;gap:24px;">
-        <p style="margin:0;"><span style="float:left;font-family:'Newsreader',serif;font-weight:600;font-size:76px;line-height:0.78;color:var(--accent,#cda155);margin:6px 16px 0 0;">A</span>DHDers often carry a staunch resistance to accepting recent, well-researched findings — namely, that they are brilliant, essential to the workplace, and strategically invaluable to their teams. In these pages, you’ll learn to dislodge the stake of that resistance — however big or small — and discover the full bloom of your ADHD talents.</p>
+        <p style="margin:0;"><span style="float:left;font-family:'Newsreader',serif;font-weight:600;font-size:clamp(50px,12vw,76px);line-height:0.78;color:var(--accent,#cda155);margin:5px 12px 0 0;">A</span>DHDers often carry a staunch resistance to accepting recent, well-researched findings — namely, that they are brilliant, essential to the workplace, and strategically invaluable to their teams. In these pages, you’ll learn to dislodge the stake of that resistance — however big or small — and discover the full bloom of your ADHD talents.</p>
         <p style="margin:0;">You may already have been through a slew of resources that didn’t help — books, podcasts, influencers, workshops, that ten-page, over-hyphenated habit-building strategy you had ChatGPT generate. Before we go any further: take a minute to appreciate everything you’ve done to succeed in a society that doesn’t yet appreciate your gifts.</p>
       </div>
       <blockquote style="margin:36px 0 0;border-left:3px solid var(--accent,#cda155);padding:8px 0 8px 26px;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(23px,3vw,32px);line-height:1.26;letter-spacing:-0.01em;color:#f7efe0;">You are not lazy. You are extremely motivated. If you achieved averagely, you’re a <span style="color:var(--accent,#cda155);">hero</span>. If you’ve gone further than that, you’re a <span style="color:var(--accent,#cda155);">dragonslayer</span>.</blockquote>
-      <a href="Chapter Three - Heroes and Dragonslayers.dc.html" style="margin-top:36px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;color:#17120c;background:var(--accent,#cda155);font-weight:600;font-size:16px;border-radius:999px;padding:13px 24px;box-shadow:0 14px 34px -16px rgba(205,161,85,0.7);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease, gap .25s ease;" style-hover="transform:translateY(-2px);gap:15px;filter:brightness(1.06);box-shadow:0 20px 42px -16px rgba(205,161,85,0.9);">Read the full chapter <span>→</span></a>
+      <a href="Chapter Three - Heroes and Dragonslayers.dc.html" style="margin-top:36px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:48px;gap:10px;color:#17120c;background:var(--accent,#cda155);font-weight:600;font-size:16px;border-radius:999px;padding:13px 24px;box-shadow:0 14px 34px -16px rgba(205,161,85,0.7);transition:transform .25s ease, box-shadow .25s ease, filter .25s ease, gap .25s ease;" style-hover="transform:translateY(-2px);gap:15px;filter:brightness(1.06);box-shadow:0 20px 42px -16px rgba(205,161,85,0.9);">Read the full chapter <span>→</span></a>
     </div>
   </section>
 
@@ -290,7 +305,7 @@
             <div style="font-size:12px;color:#9c9080;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Free Transformative Conversation with Roger</div>
           </div>
         </div>
-        <button data-modal-close="" type="button" aria-label="Close" style="flex-shrink:0;width:38px;height:38px;border-radius:999px;border:1px solid rgba(231,212,176,0.16);background:rgba(231,212,176,0.05);color:#d6c9b3;font-size:16px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .2s ease, color .2s ease, transform .2s ease;" style-hover="background:rgba(231,212,176,0.12);color:#f7efe0;transform:rotate(90deg);">✕</button>
+        <button data-modal-close="" type="button" aria-label="Close" style="flex-shrink:0;width:44px;height:44px;border-radius:999px;border:1px solid rgba(231,212,176,0.16);background:rgba(231,212,176,0.05);color:#d6c9b3;font-size:16px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .2s ease, color .2s ease, transform .2s ease;" style-hover="background:rgba(231,212,176,0.12);color:#f7efe0;transform:rotate(90deg);">✕</button>
       </div>
       <div style="position:relative;flex:1;background:#ffffff;">
         <div data-modal-loading="" style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#14100c;color:#a99c88;transition:opacity .3s ease;">
@@ -372,6 +387,8 @@ class Component extends DCLogic {
     this.initScroll();
     this.initPillarHover();
     this.initInlineCal();
+    this.initMobileNav();
+    this.initResponsiveLayout();
     const y = document.querySelector('[data-year]');
     if (y) y.textContent = new Date().getFullYear();
   }
@@ -474,6 +491,66 @@ class Component extends DCLogic {
     }
   }
 
+  initMobileNav() {
+    const links = document.querySelector('[data-nav-links]');
+    const toggle = document.querySelector('[data-nav-toggle]');
+    const menu = document.querySelector('[data-mobile-menu]');
+    if (!links || !toggle || !menu) return;
+    const bars = [toggle.querySelector('[data-bar="0"]'), toggle.querySelector('[data-bar="1"]'), toggle.querySelector('[data-bar="2"]')];
+    const mq = window.matchMedia('(max-width: 768px)');
+    const closeMenu = () => {
+      menu.style.display = 'none';
+      toggle.setAttribute('aria-expanded', 'false');
+      if (bars[0]) bars[0].style.transform = 'none';
+      if (bars[1]) { bars[1].style.opacity = '1'; }
+      if (bars[2]) bars[2].style.transform = 'none';
+    };
+    const applyMode = () => {
+      if (mq.matches) {
+        links.style.display = 'none';
+        toggle.style.display = 'inline-flex';
+      } else {
+        links.style.display = 'flex';
+        toggle.style.display = 'none';
+      }
+      closeMenu();
+    };
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.style.display === 'flex';
+      if (isOpen) { closeMenu(); return; }
+      menu.style.display = 'flex';
+      toggle.setAttribute('aria-expanded', 'true');
+      if (bars[0]) bars[0].style.transform = 'translateY(6px) rotate(45deg)';
+      if (bars[1]) bars[1].style.opacity = '0';
+      if (bars[2]) bars[2].style.transform = 'translateY(-6px) rotate(-45deg)';
+    });
+    menu.querySelectorAll('[data-mobile-link]').forEach((a) => a.addEventListener('click', () => closeMenu()));
+    if (mq.addEventListener) mq.addEventListener('change', applyMode);
+    else if (mq.addListener) mq.addListener(applyMode);
+    applyMode();
+  }
+
+  initResponsiveLayout() {
+    const hero = document.querySelector('[data-hero]');
+    const heroBg = document.querySelector('[data-hero-bg]');
+    const heroFade = document.querySelector('[data-hero-fade]');
+    const aboutMedia = document.querySelector('[data-about-media]');
+    const mq = window.matchMedia('(max-width: 768px)');
+    const apply = () => {
+      const mobile = mq.matches;
+      if (hero) hero.style.minHeight = mobile ? 'clamp(460px, 76vh, 680px)' : 'clamp(620px, 92vh, 940px)';
+      if (heroBg) heroBg.style.backgroundPosition = mobile ? '78% center' : '45% center';
+      if (heroFade) heroFade.style.height = mobile ? '220px' : '90px';
+      if (aboutMedia) {
+        aboutMedia.style.position = mobile ? 'static' : 'sticky';
+      }
+    };
+    if (mq.addEventListener) mq.addEventListener('change', apply);
+    else if (mq.addListener) mq.addListener(apply);
+    apply();
+  }
+
+
   initPillarHover() {
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.querySelectorAll('[data-pillar-card]').forEach((card) => {
@@ -555,7 +632,8 @@ class Component extends DCLogic {
 
   initScroll() {
     const nav = document.querySelector('[data-nav]');
-    const heroImg = document.querySelector('[data-hero-img]');
+    const heroBg = document.querySelector('[data-hero-bg]');
+    const hero = document.querySelector('[data-hero]');
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let ticking = false;
     const toTop = document.querySelector('[data-to-top]');
@@ -578,8 +656,11 @@ class Component extends DCLogic {
           nav.style.borderBottomColor = 'rgba(231,212,176,0.04)';
         }
       }
-      if (heroImg && !reduce && y < 900) {
-        heroImg.style.transform = 'translateY(' + (y * 0.05) + 'px) scale(1.06)';
+      if (heroBg && !reduce && hero) {
+        const heroHeight = hero.offsetHeight || 700;
+        const progress = Math.min(Math.max(y / heroHeight, 0), 1);
+        heroBg.style.transform = 'translateY(' + (y * 0.05) + 'px) scale(' + (1.06 - progress * 0.08) + ')';
+        heroBg.style.opacity = String(1 - progress * 0.4);
       }
       if (toTop) {
         if (y > showToTopAt) {
